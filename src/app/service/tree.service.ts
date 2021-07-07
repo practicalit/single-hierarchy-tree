@@ -19,7 +19,7 @@ export class TreeService {
       const url = `${environment.backUrl}${environment.places}`.replace(':id', "1");
       let response = await this.http.get<any>(url).toPromise();
       this.treeData = response;
-      return this.treeData.filter(data => data.parent == null);
+      return this.treeData.filter(data => data.country == null);
   }
 
   /**
@@ -27,7 +27,12 @@ export class TreeService {
    * @param id 
    */
   getLevelOne(id) {
-    let one = this.treeData.filter(data => data.parent == id);
-    return one;
+    let states = this.treeData.filter(data => data.country == id);
+    return states;
+  }
+  
+  getLevelTwo(id) {
+    let cities = this.treeData.filter(data => data.state == id);
+    return cities;
   }
 }

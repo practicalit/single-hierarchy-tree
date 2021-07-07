@@ -84,6 +84,17 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
           this.refreshTree(index, nodes);
           node.isLoading = false;
           break;
+        case 1:
+          nodes = this.treeService.getLevelTwo(node.item.id).map(n => {
+            return new DynamicFlatNode(
+              { name: n.pT, id: n.id },
+              node.level + 1,
+              true
+            );
+          })
+          this.refreshTree(index, nodes);
+          node.isLoading = false;
+          break;
       }
     } else {
       let count = 0;

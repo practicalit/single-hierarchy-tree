@@ -1,37 +1,51 @@
 [
     {
         "id": 1,
-        "pT": "one",
-        "parent": null
+        "pT": "usa",
+        "country": null,
+        "state": null,
+        "city": null
     },
     {
         "id": 2,
-        "pT": "two",
-        "parent": null
+        "pT": "kenya",
+        "country": null,
+        "state": null,
+        "city": null
     },
     {
         "id": 3,
-        "pT": "three",
-        "parent": 1
+        "pT": "kenyastate1",
+        "country": 2,
+        "state": null,
+        "city": null
     },
     {
         "id": 4,
-        "pT": "four",
-        "parent": 1
+        "pT": "kstate2",
+        "country": 2,
+        "state": null,
+        "city": null
     },
     {
         "id": 5,
-        "pT": "five",
-        "parent": 2
+        "pT": "kcity1",
+        "country": 1,
+        "state": 4,
+        "city": null
     },
     {
         "id": 6,
-        "pT": "six",
-        "parent": 2
+        "pT": "kcity2",
+        "country": 2,
+        "state": 4,
+        "city": null
     },
     {
         "id": 7,
-        "pT": "seven",
-        "parent": 1
+        "pT": "kcity3",
+        "country": 2,
+        "state": 4,
+        "city": null
     }
 ]
